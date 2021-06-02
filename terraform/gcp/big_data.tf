@@ -1,5 +1,11 @@
+resource "random_pet" "db" {
+  keepers = {
+    db_id = "${var.db_id}"
+  }
+}
+
 resource google_sql_database_instance "master_instance" {
-  name             = "terragoat-${var.project}-${var.environment}-master"
+  name             = "terragoat-${var.project}-${var.environment}-master-${random_pet.db.db_id}"
   database_version = "POSTGRES_11"
   region           = var.region
 
