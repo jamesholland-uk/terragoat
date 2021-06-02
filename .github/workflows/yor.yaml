@@ -1,0 +1,16 @@
+name: build
+on:
+  push:
+
+jobs:
+  yor-checks:
+    runs-on: ubuntu-latest
+    name: yor-action
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout repo
+
+      - name: Run Yor action
+        uses: bridgecrewio/yor-action@main
+        with:
+          commit_changes: NO
