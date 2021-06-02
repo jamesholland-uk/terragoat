@@ -6,7 +6,7 @@ resource "random_id" "db" {
 }
 
 resource google_sql_database_instance "master_instance" {
-  name             = "terragoat-${var.environment}-master-${random_id.db.db_id}"
+  name             = "terragoat-${var.environment}-master-${random_id.db.result}"
   database_version = "POSTGRES_11"
   region           = var.region
 
