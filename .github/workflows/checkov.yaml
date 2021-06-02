@@ -16,3 +16,4 @@ jobs:
         uses: bridgecrewio/checkov-action@master
         with:
           directory: terraform/gcp
+          soft_fail: true
