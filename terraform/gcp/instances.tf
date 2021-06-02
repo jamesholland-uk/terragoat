@@ -25,4 +25,5 @@ resource google_compute_instance "server" {
 
 resource google_compute_disk "unencrypted_disk" {
   name = "terragoat-${var.environment}-disk"
+  zone = data.google_compute_zones.zones.names[0]
 }
