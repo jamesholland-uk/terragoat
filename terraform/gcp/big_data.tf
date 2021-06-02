@@ -25,7 +25,7 @@ resource google_bigquery_dataset "dataset" {
     role          = "READER"
   }
   access {
-    user_by_email = google_service_account.bqowner.email
+    special_group = "projectOwners"
     role          = "OWNER"
   }
 }
