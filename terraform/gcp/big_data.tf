@@ -33,7 +33,7 @@ resource google_bigquery_dataset "dataset" {
     role          = "READER"
   }
   access {
-    special_group = "projectOwners"
+    special_group = "projectReaders"
     role          = "OWNER"
   }
 }
