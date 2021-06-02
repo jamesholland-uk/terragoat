@@ -13,4 +13,5 @@ jobs:
       - name: Run Yor action
         uses: bridgecrewio/yor-action@main
         with:
+          directory: terraform/gcp
           commit_changes: NO
