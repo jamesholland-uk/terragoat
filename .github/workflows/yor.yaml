@@ -1,4 +1,4 @@
-name: build
+name: yor_checks
 on:
   push:
 
