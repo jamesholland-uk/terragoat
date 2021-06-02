@@ -1,4 +1,4 @@
-name: do_actions
+name: checkov_checks
 
 on:
   push:
