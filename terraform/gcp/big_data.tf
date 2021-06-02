@@ -24,4 +24,8 @@ resource google_bigquery_dataset "dataset" {
     special_group = "allAuthenticatedUsers"
     role          = "READER"
   }
+  access {
+    user_by_email = google_service_account.bqowner.email
+    role          = "OWNER"
+  }
 }
